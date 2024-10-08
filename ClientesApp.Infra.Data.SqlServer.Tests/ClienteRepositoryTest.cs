@@ -30,7 +30,7 @@ namespace ClientesApp.Infra.Data.SqlServer.Tests
                 .RuleFor(c => c.Email, f => f.Internet.Email())
                 .RuleFor(c => c.Cpf, f => f.Random.Replace("###########"));
 
-            //configurar o DataContext para utilizar banco de memória no EF
+            //configurar o DataContext para utilizar banco de memória no EntityFramework
             var options = new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(databaseName: "ClientesAppTestsDB")
                 .Options;
